@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io (3)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io (3)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io (3)/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Link to Bootstrap CSS -->
     <link rel='stylesheet' href='../bootstrap-4.3.1-dist/css/bootstrap.css'>
@@ -15,15 +28,39 @@
 </head>
 
 <body>
+    <!-- As a heading -->
+    <nav class="navbar navbar-light" style='background-color: #ef5350'>
+        <span class="navbar-brand mb-0 h1">Pokedex</span>
+        <!-- Searchbar and submit button -->
+        <form class="form-inline">
+            <input id='pokemonInput' class="form-control mr-sm-2" type="search" placeholder="Enter ID/Name">
+            <button id='search' class="btn btn-outline-dark my-2 my-sm-0" type="button"
+                style='color: black; border-color: black;'>Search</button>
+        </form>
+    </nav>
+    <!--end navbar -->
+
+    <!-- Pokemon Card -->
+    <div id='pokemonInfoCard' class="card text-center" style="width: 18rem;">
+        <!-- Pokemon Image -->
+        <img id='pokemonImage' src="..." class="card-img-top" alt="...">
+        <!-- Pokemon Name -->
+        <div class="card-body">
+            <h5 id='pokemonName' class="card-title">pokemon name</h5>
+        </div>
+        <!-- List of Pokemon information -->
+        <ul id='pokemonInformationList' class="list-group list-group-flush">
+        </ul>
+    </div>
+
 
     <!-- Link to jQuery, popper.js, and the bootstrap js -->
-    <script src='../bootstrap-4.3.1-dist/js/bootstrap.js'></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
+    <script src='../bootstrap-4.3.1-dist/js/bootstrap.js'></script>
 
     <!-- Link to poke.js -->
     <script type='text/javascript' src='../js/poke.js'></script>
